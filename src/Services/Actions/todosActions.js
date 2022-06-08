@@ -5,7 +5,7 @@ export const getAllTodos = () => async (dispatch) =>
 {
   dispatch({ type: GET_TODOS_REQUEST });
   try {
-    const response = await axios.get("http://localhost:3001/todos");
+    const response = await axios.get("https://jsonplaceholder.typicode.com/todos");
     dispatch({ type: GET_TODOS_SUCCESS, payload: response.data });
   }
     catch (error) {
